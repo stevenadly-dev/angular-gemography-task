@@ -1,0 +1,25 @@
+.items {
+  min-height: 100vh;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden !important;
+  padding-top: 100px;
+
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+
+    padding: 1em;
+
+    .content {
+      width: 80%;
+      margin-left: 1em;
+    }
+  }
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}

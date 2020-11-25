@@ -1,0 +1,29 @@
+<div class="container items" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"
+  (scrolled)="onScroll()" [scrollWindow]="false">
+  <div class="item card mt-2" *ngFor="let repo of repos">
+
+
+    <div class="img-container w-100px">
+      <img [src]="repo.avatar_url" class="w-100" [alt]="repo.name">
+    </div>
+
+    <div class="content">
+      <h3 class="title main-color">{{repo.name}}</h3>
+
+      <p class="description sec-color">
+        {{repo.description}}
+      </p>
+      <div class="more-info">
+        <span class="stars"><i class="fas fa-star color-golden"></i> {{repo.stargazers_count}}</span>
+        <span class="issues ml-3">
+          <i class="fas fa-bug color-red"></i>
+          {{repo.open_issues_count}}
+        </span>
+      </div>
+    </div>
+
+
+  </div>
+
+
+</div>
